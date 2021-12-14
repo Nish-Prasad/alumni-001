@@ -1,54 +1,107 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 body{
     font-family: 'segoe UI';
-    font-weight: 400;
+    /* font-weight: 400; */
     background-color: #ededed;
 }
 
-header{
+.navigation{
+    height: 80px;
     width: 100%;
-    height: 70px;
     background-color: #282828;
-
 }
 .navigation-h{
-    position: absolute;
-    padding: 3px;
-    float: left;
-    margin-left: 2%;
-    margin-top: 10px;
+    /* position: relative; */
+    line-height: 80px;
+    font-size: 35px;
+    padding: 0 50px;
+    width: 50%;
     color: #39ca74;
 }
-span{
+.navigation-h span{
     color: #ffffff;
 }
 .navigation ul{
-    width: auto;
     float: right;
-    margin-top: 8px;
+    margin-right: 20px;
 }
 .navigation ul li{
     display: inline-block;
-    padding: 15px 30px;
+    line-height: 80px;
+    margin: 0 5px;
 }
-.navigation .navigation-list li a{
-    text-align: center;
+.navigation ul li a{
     color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2vw;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    
 }
 
-.navigation .navigation-list a:hover{
-    color:#f0c330;
+.navigation ul a:hover{
+    background: #39ca74;
+    /* color:#f0c330; */
     transition: 0.5s;
 }
 
-img{
-    width: 100%;
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width: 952px){
+    label.navigation-h{
+        font-size: 30px;
+        padding-left: 30px;
+    }
+    .navigation ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    .navigation ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    .navigation ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .navigation ul li{
+        font-size: 20px;
+    }
+    .navigation-list li a:hover, .navigation-list li a{
+        background: none;
+        color: #f0c330;
+    }
+    #check:checked ~ ul{
+        left: 0;
+
+    }
 }
 
 
