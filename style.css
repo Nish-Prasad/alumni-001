@@ -59,7 +59,7 @@ body {
 @media (max-width: 1048px) {
   label.navigation-h {
     font-size: 30px;
-    padding-left: 60px;
+    padding-left: 30px;
   }
   .navigation ul{
       margin-right: 20px;
